@@ -1,0 +1,32 @@
+<div class="card my-5">
+  <div class="card-body" id="main-div">
+    <form (ngSubmit)="onSubmit()" #userRetrieve="ngForm">
+      <div class="form-group">
+        <label for="id">ID</label>
+        <input type="number" [(ngModel)]="id"
+          class="form-control"
+          id="id"
+          name="id"
+          placeholder="Enter your id">
+      </div>
+      <button type="submit"
+        class="btn btn-info">Submit</button>
+    </form>
+    <table *ngIf="show" class="table table-bordered table-striped" id="user-info">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td><a href="mailto:{{ user.email }}">{{ user.email }}</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

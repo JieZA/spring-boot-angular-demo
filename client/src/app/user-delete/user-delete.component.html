@@ -1,0 +1,17 @@
+<div class="card my-5">
+    <div class="card-body" id="main-div">
+      <form (ngSubmit)="onSubmit()" #userRetrieve="ngForm">
+        <div class="form-group">
+          <label for="id">ID</label>
+          <input type="number" [(ngModel)]="id"
+            class="form-control"
+            id="id"
+            name="id"
+            placeholder="Enter your id">
+        </div>
+        <button type="submit"
+          class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>
+  
